@@ -11,7 +11,7 @@ jobs:
         uses: actions/checkout@master
 
       - name: Build container image
-        run: docker build -t ${{ vars.DOCKER_REPO }}:$GITHUB_REF_NAME-$GITHUB_RUN_NUMBER .
+        run: docker build -t ${{ vars.DOCKER_REPO }}:CODE-$GITHUB_REF_NAME-$GITHUB_RUN_NUMBER .
 
       - name: Docker Login
         env:
