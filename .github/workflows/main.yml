@@ -25,7 +25,7 @@ jobs:
       - name: Checkout infra repo
         uses: actions/checkout@master
         with:
-          repository: paulovigne/pipeline-hellogo-infra
+          repository: paulovigne/webnar-pipeline-infra
           ref: main
           token: ${{ secrets.INFRA_GITREPO_TOKEN }}
           path: infra
