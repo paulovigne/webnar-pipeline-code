@@ -33,7 +33,7 @@ jobs:
       - name: Update Deployment
         run: |
           IMAGE=${{ vars.DOCKER_REPO }}:CODE-$GITHUB_REF_NAME-$GITHUB_RUN_NUMBER
-          sed -i 's/image:[ ].*/image: '$IMAGE'/' $GITHUB_WORKSPACE/infra/k8s/deployment.yaml
+          sed -i 's|image:[ ].*|image: '$IMAGE'|' $GITHUB_WORKSPACE/infra/k8s/deployment.yaml
 
       - name: Checkin infra repo
         run: |
